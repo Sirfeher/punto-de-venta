@@ -92,7 +92,7 @@
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                           <Component id="vend_fact" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="fecha_fact" alignment="0" pref="95" max="32767" attributes="0"/>
+                                          <Component id="fecha_fact" alignment="0" max="32767" attributes="0"/>
                                           <Component id="combo_formapago" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
@@ -260,6 +260,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="num_factura">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num_facturaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -274,6 +277,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="fecha_fact">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fecha_factActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
@@ -398,14 +404,16 @@
     <Component class="javax.swing.JComboBox" name="combo_formapago">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="3">
+            <StringItem index="0" value="Efectivo"/>
+            <StringItem index="1" value="Tarjeta de cr&#xe9;dito"/>
+            <StringItem index="2" value="Pago mixto"/>
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="combo_formapagoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="desc_art">
     </Component>

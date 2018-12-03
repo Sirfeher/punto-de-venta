@@ -47,6 +47,10 @@ control_existencias ctrl = new control_existencias();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuItem10 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -128,7 +132,7 @@ control_existencias ctrl = new control_existencias();
         jMenuBar1.add(jMenu2);
 
         jMenu3.setBorder(new javax.swing.border.MatteBorder(null));
-        jMenu3.setText("Facturación");
+        jMenu3.setText("Ventas");
         jMenu3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jMenu3.setPreferredSize(new java.awt.Dimension(200, 50));
 
@@ -187,6 +191,38 @@ control_existencias ctrl = new control_existencias();
         jMenu5.add(jMenuItem5);
 
         jMenuBar1.add(jMenu5);
+
+        jMenu6.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu6.setText("Caja");
+        jMenu6.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        jMenu6.setPreferredSize(new java.awt.Dimension(200, 50));
+
+        jMenuItem9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem9.setText("jMenuItem9");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem9);
+
+        jMenuBar1.add(jMenu6);
+
+        jMenu7.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu7.setText("Gastos");
+        jMenu7.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        jMenu7.setPreferredSize(new java.awt.Dimension(200, 50));
+
+        jMenuItem10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem10.setText("jMenuItem10");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuItem10);
+
+        jMenuBar1.add(jMenu7);
 
         setJMenuBar(jMenuBar1);
 
@@ -248,8 +284,13 @@ control_existencias ctrl = new control_existencias();
     }//GEN-LAST:event_BuscararticulosActionPerformed
 
     private void item_ventaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_item_ventaActionPerformed
-     String venta = JOptionPane.showInputDialog(this,"Ingrese el documento del cliente: ",JOptionPane.OK_OPTION);
-       if(ctrl.existe_cliente(venta))
+     // String venta = JOptionPane.showInputDialog(this,"Ingrese el documento del cliente: ",JOptionPane.OK_OPTION);
+       
+     Interfaz_factura fact = new Interfaz_factura(ctrl);
+        jDesktopPane1.add(fact);
+        fact.show(); 
+     /*
+     if(ctrl.existe_cliente(venta))
        {
         Interfaz_factura fact = new Interfaz_factura(ctrl);
         jDesktopPane1.add(fact);
@@ -260,6 +301,7 @@ control_existencias ctrl = new control_existencias();
               
           JOptionPane.showMessageDialog(null,"El cliente no existe, debe registrarlo","Mensaje",JOptionPane.QUESTION_MESSAGE);  
        }
+     */
     }//GEN-LAST:event_item_ventaActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
@@ -285,6 +327,14 @@ control_existencias ctrl = new control_existencias();
     jDesktopPane1.add(dev);
     dev.show();
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -329,8 +379,11 @@ control_existencias ctrl = new control_existencias();
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -338,5 +391,6 @@ control_existencias ctrl = new control_existencias();
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
 }

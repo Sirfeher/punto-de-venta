@@ -58,7 +58,7 @@ public class Interfaz_factura extends javax.swing.JInternalFrame {
         {
         combo_articulos.addItem(idarticulo[i]);
         }
-        Object[] formapago = con.combox("forma_de_pago","id_formapago");
+        Object[] formapago = con.combox("forma_de_pago","Descripcion_formapago");
         combo_formapago.removeAllItems();
         for(int i=0;i<formapago.length;i++)
         {
@@ -122,9 +122,21 @@ public class Interfaz_factura extends javax.swing.JInternalFrame {
 
         jLabel2.setText("Num factura");
 
+        num_factura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                num_facturaActionPerformed(evt);
+            }
+        });
+
         jLabel3.setText("Vendedor");
 
         jLabel4.setText("Forma pago");
+
+        fecha_fact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fecha_factActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Fecha");
 
@@ -195,7 +207,12 @@ public class Interfaz_factura extends javax.swing.JInternalFrame {
             }
         });
 
-        combo_formapago.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_formapago.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Efectivo", "Tarjeta de crédito", "Pago mixto" }));
+        combo_formapago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                combo_formapagoActionPerformed(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel13.setText("Descuento");
@@ -270,7 +287,7 @@ public class Interfaz_factura extends javax.swing.JInternalFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(vend_fact, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(fecha_fact, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                                            .addComponent(fecha_fact, javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(combo_formapago, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(reg_factura, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -524,6 +541,18 @@ public class Interfaz_factura extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "El total no es valido");
             }
     }//GEN-LAST:event_imprimir_btActionPerformed
+
+    private void fecha_factActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fecha_factActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fecha_factActionPerformed
+
+    private void num_facturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_facturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_num_facturaActionPerformed
+
+    private void combo_formapagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_formapagoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_combo_formapagoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Reg_articulo;
