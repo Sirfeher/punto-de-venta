@@ -45,6 +45,8 @@ public class login extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBounds(new java.awt.Rectangle(500, 150, 0, 0));
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
@@ -171,9 +173,12 @@ public class login extends javax.swing.JFrame {
                     inicio.frmLog = null;
                     
                     
-                    Interfaz_principal frmHome = new Interfaz_principal();
+                    Interfaz_principal frmHome = new Interfaz_principal(mod);
                     frmHome.setVisible(true);
                     this.dispose();
+                    
+                   
+                    
                     
                 }else {
                     JOptionPane.showMessageDialog(null, "Datos incorrectos");
@@ -200,11 +205,7 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(frmIni == null){
-            frmIni = new inicio();
-            frmIni.setVisible(true);
-            this.dispose();
-        }
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

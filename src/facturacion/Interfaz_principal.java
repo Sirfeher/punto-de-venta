@@ -12,14 +12,46 @@ import javax.swing.JPanel;
  * @author ANDRES
  */
 public class Interfaz_principal extends javax.swing.JFrame {
-control_existencias ctrl = new control_existencias();
+
+    usuarios mod;
+    
+    control_existencias ctrl = new control_existencias();
+
+
     
     /**
      * Creates new form Interfaz_principal
      */
+    
+    
+    
+    
     public Interfaz_principal() {
         initComponents();
     }
+    
+    public Interfaz_principal(usuarios mod) {
+        initComponents();
+        setLocationRelativeTo(null);
+        this.mod = mod;
+        
+        lbNombre.setText(mod.getNombre());
+        lbRoll.setText(mod.getNombre_tipo());
+        
+        if(mod.getId_tipo() == 2){
+            
+        }else if(mod.getId_tipo() == 1){
+            
+            jMenu2.setVisible(false);
+            jMenu4.setVisible(false);
+            jMenu5.setVisible(false);
+        
+        
+    }
+        
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,6 +63,10 @@ control_existencias ctrl = new control_existencias();
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
+        lbNombre = new javax.swing.JLabel();
+        lbRoll = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -49,18 +85,42 @@ control_existencias ctrl = new control_existencias();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
+        jMenu8 = new javax.swing.JMenu();
+        jMenuItem14 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jDesktopPane1.setBackground(java.awt.Color.lightGray);
 
+        lbNombre.setText("test");
+        jDesktopPane1.add(lbNombre);
+        lbNombre.setBounds(1060, 590, 110, 30);
+
+        lbRoll.setText("test");
+        jDesktopPane1.add(lbRoll);
+        lbRoll.setBounds(1270, 590, 90, 30);
+
+        jLabel1.setText("Nombre del cajero:");
+        jDesktopPane1.add(jLabel1);
+        jLabel1.setBounds(940, 600, 110, 14);
+
+        jLabel2.setText("Tipo de usuario:");
+        jDesktopPane1.add(jLabel2);
+        jLabel2.setBounds(1180, 590, 90, 30);
+
         jMenu1.setBorder(new javax.swing.border.MatteBorder(null));
         jMenu1.setText("Clientes");
         jMenu1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jMenu1.setPreferredSize(new java.awt.Dimension(200, 50));
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
 
         jMenuItem1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jMenuItem1.setText("Buscar clientes");
@@ -198,13 +258,22 @@ control_existencias ctrl = new control_existencias();
         jMenu6.setPreferredSize(new java.awt.Dimension(200, 50));
 
         jMenuItem9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jMenuItem9.setText("jMenuItem9");
+        jMenuItem9.setText("Corte del día");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem9ActionPerformed(evt);
             }
         });
         jMenu6.add(jMenuItem9);
+
+        jMenuItem11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem11.setText("Historial");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem11);
 
         jMenuBar1.add(jMenu6);
 
@@ -214,7 +283,7 @@ control_existencias ctrl = new control_existencias();
         jMenu7.setPreferredSize(new java.awt.Dimension(200, 50));
 
         jMenuItem10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jMenuItem10.setText("jMenuItem10");
+        jMenuItem10.setText("Gastos diarios");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem10ActionPerformed(evt);
@@ -223,6 +292,22 @@ control_existencias ctrl = new control_existencias();
         jMenu7.add(jMenuItem10);
 
         jMenuBar1.add(jMenu7);
+
+        jMenu8.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu8.setText("Sesión");
+        jMenu8.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        jMenu8.setPreferredSize(new java.awt.Dimension(200, 50));
+
+        jMenuItem14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem14.setText("Cerrar sesión");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem14);
+
+        jMenuBar1.add(jMenu8);
 
         setJMenuBar(jMenuBar1);
 
@@ -289,6 +374,11 @@ control_existencias ctrl = new control_existencias();
      Interfaz_factura fact = new Interfaz_factura(ctrl);
         jDesktopPane1.add(fact);
         fact.show(); 
+        
+        /*clientes_ventas cli = new clientes_ventas();       
+          jDesktopPane1.add(cli);
+          cli.show();  
+        */
      /*
      if(ctrl.existe_cliente(venta))
        {
@@ -336,6 +426,24 @@ control_existencias ctrl = new control_existencias();
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        interfaz_ventacaja ventas = new interfaz_ventacaja();
+            jDesktopPane1.add(ventas);
+            ventas.show();
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+         int YesOrNo = JOptionPane.showConfirmDialog(null, "¿Seguro que quieres cerrar sesión?","simon",  JOptionPane.YES_NO_OPTION);
+        if(YesOrNo == 0){
+            
+            this.dispose();
+        }
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -374,6 +482,8 @@ control_existencias ctrl = new control_existencias();
     private javax.swing.JMenuItem Buscararticulos;
     private javax.swing.JMenuItem item_venta;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -381,9 +491,12 @@ control_existencias ctrl = new control_existencias();
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -392,5 +505,9 @@ control_existencias ctrl = new control_existencias();
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JLabel lbNombre;
+    private javax.swing.JLabel lbRoll;
     // End of variables declaration//GEN-END:variables
+
+   
 }

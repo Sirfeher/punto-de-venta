@@ -36,6 +36,8 @@ public class inicio extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBounds(new java.awt.Rectangle(500, 150, 0, 0));
+        setResizable(false);
 
         btnIniciar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnIniciar.setText("Iniciar Sesión");
@@ -78,7 +80,7 @@ public class inicio extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(btnIniciar)))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -16,6 +16,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Interfaz_factura extends javax.swing.JInternalFrame {
 
+    
     /**
      * Creates new form Interfaz_factura
      */
@@ -116,7 +117,8 @@ public class Interfaz_factura extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Generar factura");
+        setTitle("Generar venta");
+        setMaximumSize(new java.awt.Dimension(895, 588));
 
         jLabel1.setText("Nombre cliente");
 

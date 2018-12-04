@@ -3,15 +3,15 @@ package facturacion;
 
 import javax.swing.JOptionPane;
 
-public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
+public final class clientes_ventas extends javax.swing.JInternalFrame {
 
     control_existencias ctrl = new control_existencias();
-    public Interfaz_Clientes() {
+    public clientes_ventas() {
         initComponents();    
         limpiar();
         bloquear_cajas();
         
-        Object[] tipo_doc = ctrl.combox("tipo_de_documento","Descripcion");
+        Object[] tipo_doc = ctrl.combox("tipo_clientes","descripcion");
         combo_tipo.removeAllItems();
         for(int i=0;i<tipo_doc.length;i++){
         combo_tipo.addItem(tipo_doc[i]);
@@ -54,6 +54,7 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setTitle("Registrar clientes");
+        setNormalBounds(new java.awt.Rectangle(800, 0, 124, 0));
 
         regclientejButton1.setText("Registrar");
         regclientejButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -167,7 +168,7 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
                                     .addComponent(apellclientejTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(combo_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 47, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
