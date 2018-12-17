@@ -76,16 +76,16 @@ public class Interfaz_principal extends javax.swing.JFrame {
         Buscararticulos = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        item_venta = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem12 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
+        item_venta1 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenu8 = new javax.swing.JMenu();
@@ -191,23 +191,6 @@ public class Interfaz_principal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setBorder(new javax.swing.border.MatteBorder(null));
-        jMenu3.setText("Ventas");
-        jMenu3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
-        jMenu3.setPreferredSize(new java.awt.Dimension(200, 50));
-
-        item_venta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        item_venta.setText("Nueva venta");
-        item_venta.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        item_venta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                item_ventaActionPerformed(evt);
-            }
-        });
-        jMenu3.add(item_venta);
-
-        jMenuBar1.add(jMenu3);
-
         jMenu4.setBorder(new javax.swing.border.MatteBorder(null));
         jMenu4.setText("Consultas");
         jMenu4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
@@ -222,6 +205,16 @@ public class Interfaz_principal extends javax.swing.JFrame {
             }
         });
         jMenu4.add(jMenuItem7);
+
+        jMenuItem12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem12.setText("Reportes");
+        jMenuItem12.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem12);
 
         jMenuBar1.add(jMenu4);
 
@@ -274,6 +267,16 @@ public class Interfaz_principal extends javax.swing.JFrame {
             }
         });
         jMenu6.add(jMenuItem11);
+
+        item_venta1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        item_venta1.setText("Nueva venta");
+        item_venta1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        item_venta1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                item_venta1ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(item_venta1);
 
         jMenuBar1.add(jMenu6);
 
@@ -368,32 +371,6 @@ public class Interfaz_principal extends javax.swing.JFrame {
         bus.show(); 
     }//GEN-LAST:event_BuscararticulosActionPerformed
 
-    private void item_ventaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_item_ventaActionPerformed
-     // String venta = JOptionPane.showInputDialog(this,"Ingrese el documento del cliente: ",JOptionPane.OK_OPTION);
-       
-     Interfaz_factura fact = new Interfaz_factura(ctrl);
-        jDesktopPane1.add(fact);
-        fact.show(); 
-        
-        /*clientes_ventas cli = new clientes_ventas();       
-          jDesktopPane1.add(cli);
-          cli.show();  
-        */
-     /*
-     if(ctrl.existe_cliente(venta))
-       {
-        Interfaz_factura fact = new Interfaz_factura(ctrl);
-        jDesktopPane1.add(fact);
-        fact.show(); 
-       }
-       else
-       {
-              
-          JOptionPane.showMessageDialog(null,"El cliente no existe, debe registrarlo","Mensaje",JOptionPane.QUESTION_MESSAGE);  
-       }
-     */
-    }//GEN-LAST:event_item_ventaActionPerformed
-
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
      Interfaz_buscarproveedor proveedor = new Interfaz_buscarproveedor();
         jDesktopPane1.add(proveedor);
@@ -444,6 +421,18 @@ public class Interfaz_principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
+    private void item_venta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_item_venta1ActionPerformed
+        Interfaz_factura fact = new Interfaz_factura(ctrl);
+        jDesktopPane1.add(fact);
+        fact.show(); 
+    }//GEN-LAST:event_item_venta1ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+       Reporte repor = new Reporte();
+        jDesktopPane1.add(repor);
+        repor.show();
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -480,13 +469,12 @@ public class Interfaz_principal extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem Buscararticulos;
-    private javax.swing.JMenuItem item_venta;
+    private javax.swing.JMenuItem item_venta1;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
@@ -496,6 +484,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;

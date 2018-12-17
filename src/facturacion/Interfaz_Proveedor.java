@@ -26,7 +26,7 @@ control_existencias cc = new control_existencias();
         combo_tipo.addItem(tipo_doc[i]);
         }
         
-        Object[] ciudad = cc.combox("ciudad","Nombre_ciudad");
+        Object[] ciudad = cc.combox("ciudad","Codigo_ciudad");
         ciudad_combo.removeAllItems();
         for(int i=0;i<ciudad.length;i++){
         ciudad_combo.addItem(ciudad[i]);

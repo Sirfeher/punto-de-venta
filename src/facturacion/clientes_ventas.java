@@ -11,14 +11,14 @@ public final class clientes_ventas extends javax.swing.JInternalFrame {
         limpiar();
         bloquear_cajas();
         
-        Object[] tipo_doc = ctrl.combox("tipo_clientes","descripcion");
+        Object[] tipo_doc = ctrl.combox("tipo_clientes","id_cliente");
         combo_tipo.removeAllItems();
         for(int i=0;i<tipo_doc.length;i++){
         combo_tipo.addItem(tipo_doc[i]);
         
     }
         
-        Object[] ciu = ctrl.combox("ciudad","Nombre_ciudad");
+        Object[] ciu = ctrl.combox("ciudad","Codigo_ciudad");
         ciudad_combo.removeAllItems();
         for(int i=0;i<ciu.length;i++){
         ciudad_combo.addItem(ciu[i]);
