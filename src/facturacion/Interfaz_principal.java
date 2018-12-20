@@ -66,6 +66,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
         lbRoll = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -111,7 +112,12 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jDesktopPane1.add(jLabel2);
         jLabel2.setBounds(1180, 590, 90, 30);
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/icono servimotos.png"))); // NOI18N
+        jDesktopPane1.add(jLabel3);
+        jLabel3.setBounds(320, 10, 960, 590);
+
         jMenu1.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/clientes 1.png"))); // NOI18N
         jMenu1.setText("Clientes");
         jMenu1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jMenu1.setPreferredSize(new java.awt.Dimension(200, 50));
@@ -122,6 +128,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
         });
 
         jMenuItem1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/buscar clientes.png"))); // NOI18N
         jMenuItem1.setText("Buscar clientes");
         jMenuItem1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -132,6 +139,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/nuevo cliente.png"))); // NOI18N
         jMenuItem4.setText("Registrar");
         jMenuItem4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -144,11 +152,13 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/productos 1.png"))); // NOI18N
         jMenu2.setText("Productos");
         jMenu2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jMenu2.setPreferredSize(new java.awt.Dimension(200, 50));
 
         jMenuItem3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/nuevo.png"))); // NOI18N
         jMenuItem3.setText("Registar");
         jMenuItem3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -159,6 +169,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenu2.add(jMenuItem3);
 
         Buscararticulos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Buscararticulos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/lista productos.png"))); // NOI18N
         Buscararticulos.setText("Lista de productos");
         Buscararticulos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Buscararticulos.addActionListener(new java.awt.event.ActionListener() {
@@ -169,6 +180,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenu2.add(Buscararticulos);
 
         jMenuItem6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/editar.png"))); // NOI18N
         jMenuItem6.setText("Actualizar stock");
         jMenuItem6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
@@ -179,6 +191,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenu2.add(jMenuItem6);
 
         jMenuItem8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/cambio usuario.png"))); // NOI18N
         jMenuItem8.setText("Devoluciones");
         jMenuItem8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
@@ -191,11 +204,13 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu4.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/reporte factura.png"))); // NOI18N
         jMenu4.setText("Consultas");
         jMenu4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jMenu4.setPreferredSize(new java.awt.Dimension(200, 50));
 
         jMenuItem7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/consultar facturas.png"))); // NOI18N
         jMenuItem7.setText("Consulta facturas clientes");
         jMenuItem7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
@@ -206,6 +221,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenu4.add(jMenuItem7);
 
         jMenuItem12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/reportes.png"))); // NOI18N
         jMenuItem12.setText("Reportes");
         jMenuItem12.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
@@ -218,11 +234,13 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu4);
 
         jMenu5.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/proveedores.png"))); // NOI18N
         jMenu5.setText("Proveedores");
         jMenu5.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jMenu5.setPreferredSize(new java.awt.Dimension(200, 50));
 
         jMenuItem2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/nuevo proveedor.png"))); // NOI18N
         jMenuItem2.setText("Registrar proveedor");
         jMenuItem2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -233,6 +251,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenu5.add(jMenuItem2);
 
         jMenuItem5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/editar.png"))); // NOI18N
         jMenuItem5.setText("Lista proveedores");
         jMenuItem5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
@@ -245,11 +264,13 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu5);
 
         jMenu6.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/movimientos.png"))); // NOI18N
         jMenu6.setText("Caja");
         jMenu6.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jMenu6.setPreferredSize(new java.awt.Dimension(200, 50));
 
         jMenuItem9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/corte del dia.png"))); // NOI18N
         jMenuItem9.setText("Corte del día");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -259,6 +280,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenu6.add(jMenuItem9);
 
         jMenuItem11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/historial.png"))); // NOI18N
         jMenuItem11.setText("Historial");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -268,6 +290,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenu6.add(jMenuItem11);
 
         item_venta1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        item_venta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/nueva venta.png"))); // NOI18N
         item_venta1.setText("Nueva venta");
         item_venta1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         item_venta1.addActionListener(new java.awt.event.ActionListener() {
@@ -280,11 +303,13 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu6);
 
         jMenu7.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/gastos.png"))); // NOI18N
         jMenu7.setText("Gastos");
         jMenu7.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jMenu7.setPreferredSize(new java.awt.Dimension(200, 50));
 
         jMenuItem10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/gastos diarios.png"))); // NOI18N
         jMenuItem10.setText("Gastos diarios");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -296,11 +321,13 @@ public class Interfaz_principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu7);
 
         jMenu8.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/cambio clave.png"))); // NOI18N
         jMenu8.setText("Sesión");
         jMenu8.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jMenu8.setPreferredSize(new java.awt.Dimension(200, 50));
 
         jMenuItem14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturacion/imagenes/salir.png"))); // NOI18N
         jMenuItem14.setText("Cerrar sesión");
         jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -484,6 +511,7 @@ public class Interfaz_principal extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu4;

@@ -76,8 +76,6 @@ public class Interfaz_principal_1 extends javax.swing.JFrame {
         Buscararticulos = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        item_venta = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
@@ -86,9 +84,12 @@ public class Interfaz_principal_1 extends javax.swing.JFrame {
         jMenu6 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
+        item_venta = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
+        jMenu9 = new javax.swing.JMenu();
+        jMenuItem13 = new javax.swing.JMenuItem();
         jMenu8 = new javax.swing.JMenu();
         jMenuItem14 = new javax.swing.JMenuItem();
 
@@ -192,23 +193,6 @@ public class Interfaz_principal_1 extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setBorder(new javax.swing.border.MatteBorder(null));
-        jMenu3.setText("Ventas");
-        jMenu3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
-        jMenu3.setPreferredSize(new java.awt.Dimension(200, 50));
-
-        item_venta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        item_venta.setText("Nueva venta");
-        item_venta.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        item_venta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                item_ventaActionPerformed(evt);
-            }
-        });
-        jMenu3.add(item_venta);
-
-        jMenuBar1.add(jMenu3);
-
         jMenu4.setBorder(new javax.swing.border.MatteBorder(null));
         jMenu4.setText("Consultas");
         jMenu4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
@@ -276,6 +260,16 @@ public class Interfaz_principal_1 extends javax.swing.JFrame {
         });
         jMenu6.add(jMenuItem11);
 
+        item_venta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        item_venta.setText("Nueva venta");
+        item_venta.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        item_venta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                item_ventaActionPerformed(evt);
+            }
+        });
+        jMenu6.add(item_venta);
+
         jMenuBar1.add(jMenu6);
 
         jMenu7.setBorder(new javax.swing.border.MatteBorder(null));
@@ -304,6 +298,23 @@ public class Interfaz_principal_1 extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu7);
 
+        jMenu9.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu9.setText("Reportes");
+        jMenu9.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
+        jMenu9.setMaximumSize(new java.awt.Dimension(200, 32767));
+        jMenu9.setPreferredSize(new java.awt.Dimension(200, 32));
+
+        jMenuItem13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMenuItem13.setText("Reportes");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenu9.add(jMenuItem13);
+
+        jMenuBar1.add(jMenu9);
+
         jMenu8.setBorder(new javax.swing.border.MatteBorder(null));
         jMenu8.setText("Sesión");
         jMenu8.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
@@ -331,7 +342,7 @@ public class Interfaz_principal_1 extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 625, Short.MAX_VALUE)
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 627, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -461,6 +472,11 @@ public class Interfaz_principal_1 extends javax.swing.JFrame {
         gastos.show();
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        Interfaz_reportes reportes = new Interfaz_reportes();
+        jDesktopPane1.add(reportes);
+        reportes.show();    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -506,17 +522,18 @@ public class Interfaz_principal_1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
