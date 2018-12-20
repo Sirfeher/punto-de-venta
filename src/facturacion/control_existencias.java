@@ -4,10 +4,7 @@
  */
 package facturacion;
 
-/**
- *
- * @author ANDRES
- */
+
 public class control_existencias 
 {
      private Sentencias_sql sen;
@@ -176,4 +173,14 @@ public class control_existencias
         {
         return sen.datos_totalfactura("total", "select round( sum( total ) , 2 ) as total from detalle_factura where cod_factura='"+numfact+"';");
     }
+        
+        public boolean ingresogasto( String concepto, String cantidad, String fecha)
+     {
+         
+         String[] datos = {concepto, cantidad, fecha};
+          sen.insertar(datos, "INSERT INTO ingreso_datos (concepto, cantidad, fecha) VALUES(?,?,?)");
+         return false;
+         
+        
+        }
     }

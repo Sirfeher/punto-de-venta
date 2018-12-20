@@ -110,7 +110,7 @@ public class inicio extends javax.swing.JFrame {
         if(frmLog == null){
             frmLog = new login();
             frmLog.setVisible(true);
-           
+           this.dispose();
         }
         
     }//GEN-LAST:event_btnIniciarActionPerformed

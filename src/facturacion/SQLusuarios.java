@@ -12,10 +12,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Feher
- */
+
 public class SQLusuarios extends conexion {
     
     public boolean registrar(usuarios usr) throws ClassNotFoundException{

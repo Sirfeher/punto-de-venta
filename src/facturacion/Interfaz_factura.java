@@ -59,7 +59,7 @@ public class Interfaz_factura extends javax.swing.JInternalFrame {
         {
         combo_articulos.addItem(idarticulo[i]);
         }
-        Object[] formapago = con.combox("forma_de_pago","Descripcion_formapago");
+        Object[] formapago = con.combox("forma_de_pago","id_formapago");
         combo_formapago.removeAllItems();
         for(int i=0;i<formapago.length;i++)
         {

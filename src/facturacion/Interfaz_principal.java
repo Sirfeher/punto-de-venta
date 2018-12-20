@@ -4,16 +4,15 @@
  */
 package facturacion;
 
+import static facturacion.inicio.frmLog;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author ANDRES
- */
+
 public class Interfaz_principal extends javax.swing.JFrame {
 
     usuarios mod;
+    public static login frmLog;
     
     control_existencias ctrl = new control_existencias();
 
@@ -418,13 +417,25 @@ public class Interfaz_principal extends javax.swing.JFrame {
         if(YesOrNo == 0){
             
             this.dispose();
+            frmLog = new login();
+            frmLog.setVisible(true);
+            
         }
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     private void item_venta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_item_venta1ActionPerformed
+      String venta = JOptionPane.showInputDialog(this,"Ingrese el documento del cliente: ",JOptionPane.OK_OPTION);
+       if(ctrl.existe_cliente(venta))
+       {
         Interfaz_factura fact = new Interfaz_factura(ctrl);
         jDesktopPane1.add(fact);
         fact.show(); 
+       }
+       else
+       {
+              
+          JOptionPane.showMessageDialog(null,"El cliente no existe, debe registrarlo","Mensaje",JOptionPane.QUESTION_MESSAGE);  
+       }
     }//GEN-LAST:event_item_venta1ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed

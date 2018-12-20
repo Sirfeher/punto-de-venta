@@ -76,7 +76,7 @@
                           <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                           <Component id="dirproveedorjTextField9" alignment="0" min="-2" pref="187" max="-2" attributes="0"/>
                           <Component id="telefonoprovjTextField9" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                          <Component id="ciudad_combo" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
+                          <Component id="ciudad_combo1" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -129,9 +129,9 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="nomproveedorjTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ciudad_combo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ciudad_combo1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="67" max="32767" attributes="0"/>
+              <EmptySpace pref="71" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -683,7 +683,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="ciudad_combo">
+    <Component class="javax.swing.JComboBox" name="ciudad_combo1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -695,7 +695,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ciudad_comboActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ciudad_combo1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

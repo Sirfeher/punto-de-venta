@@ -6,10 +6,7 @@ package facturacion;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author ANDRES
- */
+
 public class Interfaz_Proveedor extends javax.swing.JInternalFrame {
 control_existencias cc = new control_existencias();
     /**
@@ -20,16 +17,16 @@ control_existencias cc = new control_existencias();
         limpiar();
         bloquear_cajas();
         
-        Object[] tipo_doc = cc.combox("tipo_de_documento","Descripcion");
+        Object[] tipo_doc = cc.combox("tipo_de_documento","id_tipo_documento");
         combo_tipo.removeAllItems();
         for(int i=0;i<tipo_doc.length;i++){
         combo_tipo.addItem(tipo_doc[i]);
         }
         
         Object[] ciudad = cc.combox("ciudad","Codigo_ciudad");
-        ciudad_combo.removeAllItems();
+        ciudad_combo1.removeAllItems();
         for(int i=0;i<ciudad.length;i++){
-        ciudad_combo.addItem(ciudad[i]);
+        ciudad_combo1.addItem(ciudad[i]);
         }
     }
 
@@ -93,7 +90,7 @@ control_existencias cc = new control_existencias();
         telefonoprovjTextField9 = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         combo_tipo = new javax.swing.JComboBox();
-        ciudad_combo = new javax.swing.JComboBox();
+        ciudad_combo1 = new javax.swing.JComboBox();
 
         setIconifiable(true);
         setMaximizable(true);
@@ -421,10 +418,10 @@ control_existencias cc = new control_existencias();
 
         combo_tipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        ciudad_combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        ciudad_combo.addActionListener(new java.awt.event.ActionListener() {
+        ciudad_combo1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ciudad_combo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ciudad_comboActionPerformed(evt);
+                ciudad_combo1ActionPerformed(evt);
             }
         });
 
@@ -474,7 +471,7 @@ control_existencias cc = new control_existencias();
                             .addComponent(jLabel19)
                             .addComponent(dirproveedorjTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(telefonoprovjTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ciudad_combo, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ciudad_combo1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -513,8 +510,8 @@ control_existencias cc = new control_existencias();
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nomproveedorjTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ciudad_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                    .addComponent(ciudad_combo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
                     .addComponent(jLabel20))
@@ -562,7 +559,7 @@ public void limpiar()
        nomproveedorjTextField9.setEnabled(false);
        apellproveedorjTextField9.setEnabled(false);       
        dirproveedorjTextField9.setEnabled(false); 
-       ciudad_combo.setEnabled(false);
+       ciudad_combo1.setEnabled(false);
        telefonoprovjTextField9.setEnabled(false);
        nuevoregjButton7.setEnabled(true);
        regproveedorjButton9.setEnabled(false);
@@ -577,7 +574,7 @@ public void limpiar()
        nomproveedorjTextField9.setEnabled(true);
        apellproveedorjTextField9.setEnabled(true);       
        dirproveedorjTextField9.setEnabled(true); 
-       ciudad_combo.setEnabled(true);
+       ciudad_combo1.setEnabled(true);
        telefonoprovjTextField9.setEnabled(true);
        nuevoregjButton7.setEnabled(false);
        regproveedorjButton9.setEnabled(true);
@@ -618,7 +615,7 @@ public void limpiar()
         nom = nomproveedorjTextField9.getText();
         ape = apellproveedorjTextField9.getText(); 
         dir = dirproveedorjTextField9.getText();
-        ciu = ciudad_combo.getSelectedItem().toString();
+        ciu = ciudad_combo1.getSelectedItem().toString();
         tel = telefonoprovjTextField9.getText();
         
         control_proveedor prov = new control_proveedor(docu, tipo, nom, ape,nom_com, dir, ciu, tel);
@@ -673,14 +670,14 @@ public void limpiar()
    telefonoprovjTextField9.transferFocus();
     }//GEN-LAST:event_telefonoprovjTextField9ActionPerformed
 
-    private void ciudad_comboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ciudad_comboActionPerformed
+    private void ciudad_combo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ciudad_combo1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ciudad_comboActionPerformed
+    }//GEN-LAST:event_ciudad_combo1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellproveedorjTextField9;
     private javax.swing.JButton cancelprovjButton8;
-    private javax.swing.JComboBox ciudad_combo;
+    private javax.swing.JComboBox ciudad_combo1;
     private javax.swing.JComboBox combo_tipo;
     private javax.swing.JTextField dirproveedorjTextField9;
     private javax.swing.JTextField documentoproveedorjTextField9;
